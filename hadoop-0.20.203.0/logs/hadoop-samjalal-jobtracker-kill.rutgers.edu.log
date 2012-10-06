@@ -1,0 +1,41 @@
+2012-09-28 16:50:43,994 INFO org.apache.hadoop.mapred.JobTracker: STARTUP_MSG: 
+/************************************************************
+STARTUP_MSG: Starting JobTracker
+STARTUP_MSG:   host = kill.rutgers.edu/128.6.13.175
+STARTUP_MSG:   args = []
+STARTUP_MSG:   version = 0.20.203.0
+STARTUP_MSG:   build = http://svn.apache.org/repos/asf/hadoop/common/branches/branch-0.20-security-203 -r 1099333; compiled by 'oom' on Wed May  4 07:57:50 PDT 2011
+************************************************************/
+2012-09-28 16:50:44,073 INFO org.apache.hadoop.metrics2.impl.MetricsConfig: loaded properties from hadoop-metrics2.properties
+2012-09-28 16:50:44,080 INFO org.apache.hadoop.metrics2.impl.MetricsSourceAdapter: MBean for source MetricsSystem,sub=Stats registered.
+2012-09-28 16:50:44,081 INFO org.apache.hadoop.metrics2.impl.MetricsSystemImpl: Scheduled snapshot period at 10 second(s).
+2012-09-28 16:50:44,081 INFO org.apache.hadoop.metrics2.impl.MetricsSystemImpl: JobTracker metrics system started
+2012-09-28 16:50:44,252 INFO org.apache.hadoop.metrics2.impl.MetricsSourceAdapter: MBean for source ugi registered.
+2012-09-28 16:50:44,256 INFO org.apache.hadoop.security.token.delegation.AbstractDelegationTokenSecretManager: Updating the current master key for generating delegation tokens
+2012-09-28 16:50:44,257 INFO org.apache.hadoop.security.token.delegation.AbstractDelegationTokenSecretManager: Starting expired delegation token remover thread, tokenRemoverScanInterval=60 min(s)
+2012-09-28 16:50:44,257 INFO org.apache.hadoop.security.token.delegation.AbstractDelegationTokenSecretManager: Updating the current master key for generating delegation tokens
+2012-09-28 16:50:44,257 INFO org.apache.hadoop.mapred.JobTracker: Scheduler configured with (memSizeForMapSlotOnJT, memSizeForReduceSlotOnJT, limitMaxMemForMapTasks, limitMaxMemForReduceTasks) (-1, -1, -1, -1)
+2012-09-28 16:50:44,258 INFO org.apache.hadoop.util.HostsFileReader: Refreshing hosts (include/exclude) list
+2012-09-28 16:50:44,296 INFO org.apache.hadoop.mapred.JobTracker: Starting jobtracker with owner as samjalal
+2012-09-28 16:50:44,304 FATAL org.apache.hadoop.mapred.JobTracker: java.net.BindException: Problem binding to hadoop42.rutgers.edu/172.16.90.208:7001 : Cannot assign requested address
+	at org.apache.hadoop.ipc.Server.bind(Server.java:226)
+	at org.apache.hadoop.ipc.Server$Listener.<init>(Server.java:300)
+	at org.apache.hadoop.ipc.Server.<init>(Server.java:1478)
+	at org.apache.hadoop.ipc.RPC$Server.<init>(RPC.java:505)
+	at org.apache.hadoop.ipc.RPC.getServer(RPC.java:466)
+	at org.apache.hadoop.mapred.JobTracker.<init>(JobTracker.java:2288)
+	at org.apache.hadoop.mapred.JobTracker.<init>(JobTracker.java:2171)
+	at org.apache.hadoop.mapred.JobTracker.startTracker(JobTracker.java:300)
+	at org.apache.hadoop.mapred.JobTracker.startTracker(JobTracker.java:291)
+	at org.apache.hadoop.mapred.JobTracker.main(JobTracker.java:4956)
+Caused by: java.net.BindException: Cannot assign requested address
+	at sun.nio.ch.Net.bind(Native Method)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:126)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:59)
+	at org.apache.hadoop.ipc.Server.bind(Server.java:224)
+	... 9 more
+
+2012-09-28 16:50:44,305 INFO org.apache.hadoop.mapred.JobTracker: SHUTDOWN_MSG: 
+/************************************************************
+SHUTDOWN_MSG: Shutting down JobTracker at kill.rutgers.edu/128.6.13.175
+************************************************************/

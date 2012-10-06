@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+
+<!-- Put site-specific property overrides in this file. -->
+
+<configuration>
+	<property>
+    		<name>mapred.job.tracker</name>
+    		<value>hadoop42.rutgers.edu:7001</value>
+  	</property>
+
+	<property>
+    		<name>mapred.job.tracker.http.address</name>
+    		<value>0.0.0.0:34050</value>
+  	</property>
+	<property>
+    		<name>mapred.task.tracker.http.address</name>
+    		<value>0.0.0.0:0</value>
+  	</property>
+
+
+	<property>
+    		<name>mapred.queue.names</name>
+    		<value>default</value>
+  	</property>
+	<property>
+		<name>mapreduce.job.reduce.slowstart.completedmaps</name>
+		<value>1.0</value>
+	</property>
+    <property>
+        <name>mapred.tasktracker.map.tasks.maximum</name>
+        <value>4</value>
+    </property>
+    <property>
+        <name>mapred.tasktracker.reduce.tasks.maximum</name>
+        <value>2</value>
+    </property>
+    <property>
+        <name>mapred.submit.replication</name>
+        <value>2</value>
+    </property>    
+
+        <property>
+                <name>mapred.map.child.java.opts</name>
+                <value>-Xmx512m</value>
+        </property>
+        <property>
+                <name>mapred.reduce.child.java.opts</name>
+                <value>-Xmx512m</value>
+        </property>
+	<property>
+                <name>mapred.local.dir</name>
+                <value>/hadoop/local/CS553/mapred20/local</value>
+        </property>
+   
+</configuration>
